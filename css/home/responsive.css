@@ -1,0 +1,123 @@
+@media (max-width: 1200px) {
+            .slide {
+                padding: 60px 50px; /* Reduced padding */
+            }
+
+            .hero-visuals {
+                right: 50px;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .slide {
+                padding: 80px 40px; /* Adjusted padding */
+            }
+
+            .sobre-content,
+            .contato-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .services-grid,
+            .cases-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 25px; /* Adjusted gap */
+            }
+
+            .hero-visuals {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2.8rem; /* Further reduced font size */
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .side-menu {
+                bottom: 15px; /* Adjusted position */
+                padding: 8px 10px;
+                gap: 15px;
+                border-radius: 15px;
+            }
+            
+            .menu-item {
+                width: 45px;
+                height: 45px;
+            }
+
+            .dots-navigation {
+                bottom: 80px; /* Adjusted position */
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                padding: 70px 20px; /* More padding top/bottom */
+            }
+
+            .hero-title {
+                font-size: 2.2rem; /* Mobile title size */
+                line-height: 1.3;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem; /* Mobile section title */
+                margin-bottom: 1.5rem;
+            }
+            
+            .contato-title {
+                font-size: 2rem;
+            }
+            
+            .contato-description {
+                font-size: 1rem;
+            }
+
+            /* No need to hide footer anymore */
+            footer {
+                padding: 30px 20px;
+                margin-top: 30px;
+            }
+            
+            .footer-logo {
+                max-width: 100px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .footer-aside-content {
+                flex-direction: column;
+                margin-bottom: 0;
+                gap: 15px;
+            }
+
+            .footer-informacoes-contato {
+                text-align: center;
+            }
+
+            .social-icons {
+                margin-bottom: 0;
+            }
+        }

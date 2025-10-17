@@ -1,0 +1,157 @@
+        body {
+            background: var(--bg-light);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            overflow-y: hidden;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Container Principal dos Slides */
+        .slides-container {
+            display: flex;
+            width: 600vw;
+            height: 100vh;
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        /* Slides */
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 100px;
+            position: relative;
+        }
+
+        .slide-content {
+            max-width: 1200px;
+            width: 100%;
+            z-index: 2;
+        }
+
+        /* Menu Lateral */
+        .side-menu {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            padding: 15px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .menu-item {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .menu-item:hover {
+            color: transparent;
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent), var(--contrast));
+            -webkit-background-clip: text;
+            background-clip: text;
+            transform: scale(1.2);
+        }
+
+        .menu-item.active {
+            color: var(--primary);
+            background: rgba(255, 107, 0, 0.1);
+        }
+
+        .menu-tooltip {
+            position: absolute;
+            left: 60px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: var(--shadow);
+        }
+
+        .menu-item:hover .menu-tooltip {
+            opacity: 1;
+        }
+
+        /* Dots de Navegação */
+        .dots-navigation {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            transform: scale(1.4);
+            box-shadow: 0 0 8px rgba(255, 107, 0, 0.6);
+        }
+
+        /* Partículas */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 107, 0, 0.1);
+            border-radius: 50%;
+            animation: float-particle 15s infinite linear;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0);
+            }
+
+            100% {
+                transform: translateY(-100px) translateX(100px);
+            }
+        }
