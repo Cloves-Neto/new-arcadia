@@ -6,37 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcadia CS - Soluções Digitais para Negócios Reais</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/home/main.css">
-    <link rel="stylesheet" href="./css/home/hero.css">
-    <link rel="stylesheet" href="./css/home/sobre.css">
-    <link rel="stylesheet" href="./css/home/servicos.css">
-    <link rel="stylesheet" href="./css/home/cases.css">
-    <link rel="stylesheet" href="./css/home/depoimentos.css">
-    <link rel="stylesheet" href="./css/home/contato.css">
-    <link rel="stylesheet" href="./css/home/footer.css">
-    <link rel="stylesheet" href="./css/home/responsive.css">
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/home/main.css">
+    <link rel="stylesheet" href="src/styles/home/hero.css">
+    <link rel="stylesheet" href="src/styles/home/sobre.css">
+    <link rel="stylesheet" href="src/styles/home/servicos.css">
+    <link rel="stylesheet" href="src/styles/home/cases.css">
+    <link rel="stylesheet" href="src/styles/home/depoimentos.css">
+    <link rel="stylesheet" href="src/styles/home/contato.css">
+    <link rel="stylesheet" href="src/styles/home/responsive.css">
+
+    <script src="src/scripts/componentLoader.js" defer></script>
 
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="container">
-            <a href="#hero">
-                <img src="./NEW_ARCADIA.svg" alt="logo arcadiacs" class="logo">
-            </a>
-            <nav class="main-nav">
-                <a href="#hero">Home</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#cases">Cases</a>
-                <a href="#depoimentos">Depoimentos</a>
-                <a href="#contato">Contato</a>
-            </nav>
-        </div>
-    </header>
+    <header id="header-placeholder"></header>
 
-    <div class="container">
+    <main>
 
         <section id="hero">
             <!-- Grid animado -->
@@ -47,17 +34,8 @@
             <div class="shape-float shape-2"></div>
             <div class="shape-float shape-3"></div>
 
-            <!-- Partículas -->
-            <div class="particles">
-                <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-                <div class="particle" style="left: 25%; animation-delay: 2s;"></div>
-                <div class="particle" style="left: 40%; animation-delay: 4s;"></div>
-                <div class="particle" style="left: 55%; animation-delay: 6s;"></div>
-                <div class="particle" style="left: 70%; animation-delay: 8s;"></div>
-                <div class="particle" style="left: 85%; animation-delay: 10s;"></div>
-            </div>
+            <div class="hero-content container">
 
-            <div class="hero-content">
                 <div class="hero-badge">
                     <i class="fas fa-rocket"></i>
                     <span>Soluções Digitais Inovadoras</span>
@@ -74,7 +52,7 @@
 
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">100+</span>
+                        <span class="stat-number">+20</span>
                         <span class="stat-label">Projetos</span>
                     </div>
                     <div class="stat-item">
@@ -82,7 +60,7 @@
                         <span class="stat-label">Satisfação</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">24/7</span>
+                        <span class="stat-number">+454h</span>
                         <span class="stat-label">Suporte</span>
                     </div>
                 </div>
@@ -116,7 +94,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
 
         <section id="sobre">
@@ -140,42 +117,6 @@
                         Combinamos tecnologia, criatividade e estratégia para transformar ideias em experiências
                         digitais memoráveis
                     </p>
-                </div>
-
-                <!-- Hero card principal -->
-                <div class="hero-card">
-                    <div class="hero-content">
-                        <div class="hero-text-section">
-                            <h3>Inovação que Inspira</h3>
-                            <p>
-                                A Arcadia CS nasceu da união entre desenvolvedores, designers e estrategistas com um
-                                propósito claro: ajudar pequenos e médios negócios a crescer através da inovação digital
-                                e soluções criativas.
-                            </p>
-
-                            <div class="stats-inline">
-                                <div class="stat-inline-item">
-                                    <span class="stat-inline-number">100+</span>
-                                    <span class="stat-inline-label">Projetos</span>
-                                </div>
-                                <div class="stat-inline-item">
-                                    <span class="stat-inline-number">50+</span>
-                                    <span class="stat-inline-label">Clientes</span>
-                                </div>
-                                <div class="stat-inline-item">
-                                    <span class="stat-inline-number">5+</span>
-                                    <span class="stat-inline-label">Anos</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="hero-quote-section">
-                            <i class="fas fa-quote-left quote-icon"></i>
-                            <blockquote>
-                                "Somos o elo entre o humano e o tecnológico."
-                            </blockquote>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Grid de valores -->
@@ -850,40 +791,14 @@
             </div>
         </section>
 
-        <footer id="footer-section">
-            <div class="footer-aside-content">
-                <!-- Logo -->
-                <div class="footer-logo">
-                    <img src="./NEW_ARCADIA.svg" alt="logo arcadiacs" class="logo">
-                </div>
-                <!-- Informações de contato -->
-                <p class="footer-informacoes-contato">
-                    contato@arcadiacs.com.br<br>
-                    59.751.591/0001-81<br>
-                    São Paulo, SP
-                </p>
-
-            </div>
-
-            <p class="copyright">
-                Arcadia CS &COPY; 2025 — Soluções Digitais para Negócios Reais<br>
-                Todos os direitos reservados.
-            </p>
-
-            <div class="social-icons">
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="fab fa-github"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-            </div>
-
-        </footer>
-    </div>
+        <footer id="footer-placeholder"></footer>
+    </main>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/home/particulas.js"></script>
+    <script src="src/scripts/main.js"></script>
+
+    <script src="src/scripts/home/hero-orb.js"></script>
 
 </body>
 

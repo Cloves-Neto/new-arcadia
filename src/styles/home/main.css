@@ -1,0 +1,16 @@
+body {
+    background: var(--bg-light);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    /* Allow vertical scrolling */
+    overflow-y: auto;
+}
+
+/* General Section Styling */
+section {
+    width: 100%;
+    height: auto;
+    /* padding: 120px 100px 80px; Add top padding to account for fixed header */
+    min-height: 100vh; /* Make sections at least screen height */
+}
+

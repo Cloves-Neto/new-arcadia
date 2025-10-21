@@ -1,0 +1,170 @@
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow);
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px; /* Fixed height for header */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px; /* Max width for content */
+}
+
+.header-logo-link .logo {
+    height: 45px; /* Slightly larger logo */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.header-logo-link .logo:hover {
+    transform: scale(1.05);
+}
+
+/* Desktop Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between nav list and button */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px; /* Space between nav items */
+}
+
+.nav-list a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+    width: 100%;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Header CTA Button */
+.header-cta {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    color: #FFFFFF;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 107, 0, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 107, 0, 0.5);
+}
+
+/* Mobile Toggle Button */
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    z-index: 1001; /* Above nav */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .main-header {
+        padding: 0 30px;
+    }
+
+    .main-nav {
+        /* Mobile menu styles */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s ease-in-out;
+        gap: 40px;
+    }
+
+    .main-nav.active {
+        right: 0; /* Slide in */
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .nav-list a {
+        font-size: 1.5rem;
+    }
+
+    .header-cta {
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        padding: 0 20px;
+    }
+
+    .header-logo-link .logo {
+        height: 40px;
+    }
+}

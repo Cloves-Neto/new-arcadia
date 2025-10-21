@@ -33,4 +33,22 @@ document.addEventListener('DOMContentLoaded', function () {
             container.appendChild(particle);
         }
     }
+
+    // --- Header Menu Toggle Logic ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const navLinks = document.querySelectorAll('.nav-list a'); // Select all nav links
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Close menu when a nav link is clicked (for mobile UX)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+            });
+        });
+    }
 });
