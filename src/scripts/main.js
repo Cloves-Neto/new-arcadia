@@ -41,12 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', () => {
+            console.log('Menu toggle clicked');
             mainNav.classList.toggle('active');
         });
 
         // Close menu when a nav link is clicked (for mobile UX)
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
+                console.log('Nav link clicked');
                 mainNav.classList.remove('active');
             });
         });

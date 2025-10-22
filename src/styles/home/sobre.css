@@ -2,10 +2,6 @@
             position: relative;
             min-height: 100vh;
             padding: 120px 5% 80px;
-            background: radial-gradient(ellipse at top left, rgba(255, 107, 0, 0.15), transparent 60%),
-                        radial-gradient(ellipse at bottom right, rgba(114, 9, 183, 0.15), transparent 60%),
-                        radial-gradient(ellipse at center, rgba(230, 57, 70, 0.08), transparent 70%),
-                        linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
             overflow: hidden;
         }
 
